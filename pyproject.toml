@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drive-web-agent"
+version = "0.1.0"
+description = "Dual-level reasoning and interaction skills for continual-learning web agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+  "AgentOccam*",
+  "browser_env*",
+  "evaluation_harness*",
+  "llms*",
+]
+exclude = ["tests*", "third_party*"]
+
+[tool.setuptools.package-data]
+AgentOccam = ["configs/*.yml", "prompts/**/*.txt"]
+

@@ -1,0 +1,13 @@
+use_skill skill_name arg1=value1 arg2=value2 ...: To call a pre-defined skill from AVAILABLE SKILLS list. The skill_name must exactly match one from the list above and must not be wrapped in brackets. Arguments should be provided as key=value pairs. E.g., `use_skill click_element_by_text text="ONE" exact=true` or `use_skill type_text_into_ref ref=5 text="hello" press_enter=false`. Skills are high-level operations that can accomplish complex tasks efficiently.
+
+IMPORTANT - Before calling a skill:
+1. Read the skill's docstring carefully to understand its SCOPE (what it does and what it returns)
+2. Determine if the skill will FULLY complete your task or only PARTIALLY help
+3. If the skill only navigates to a page, plan your next actions BEFORE calling it
+
+CRITICAL - After a skill executes successfully:
+1. Compare the result with your ORIGINAL TASK OBJECTIVE
+2. Ask: "Does this result FULLY answer/complete my task?"
+3. If YES → use `stop [answer]` with the actual answer from the result
+4. If NO (skill only navigated/performed partial action) → continue with basic actions (click, type, scroll) to complete the remaining steps
+5. NEVER stop with a placeholder or "0" just because the skill succeeded - only stop when you have the ACTUAL answer!

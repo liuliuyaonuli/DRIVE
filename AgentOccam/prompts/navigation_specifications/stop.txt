@@ -1,0 +1,4 @@
+stop [answer]: Stop interaction and return the answer inside brackets. If the
+task does not require a textual answer, return an empty answer. Before stopping,
+verify the task's stated constraints and the visible final state; when a DRIVE
+reasoning skill is active, follow its V instruction.

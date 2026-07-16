@@ -1,0 +1,1 @@
+press [key]: To press a keyboard key allowed by the MiniWoB task. Use the key name without angle brackets, e.g., `press [Enter]` or `press [Tab]`. Common allowed keys include Enter, Tab, Backspace, Delete, Escape, ArrowUp, ArrowDown, ArrowLeft, ArrowRight, PageUp, and PageDown.

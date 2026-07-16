@@ -1,0 +1,63 @@
+logging: true
+verbose: 1
+debug: false
+logdir: "./runs"
+logname: "drive"
+max_steps: 20
+
+skills:
+  use_skills: false
+  skill_site: null
+  skill_dir: "skills"
+  skill_file: "operation_skills.py"
+  skill_metadata: "operation_skills.json"
+  task_lessons_path: null
+  use_interaction_skills: true
+  use_reasoning_skills: true
+  interaction_threshold: 0.06
+  reasoning_threshold: 0.06
+
+agent:
+  type: "AgentOccam"
+  others:
+    max_steps: 20
+    logname: "drive"
+    logging: true
+    verbose: 1
+    debug: false
+  actor:
+    debug: 0
+    verbose: 1
+    number: 1
+    model: "gpt-4.1"
+    documented_interaction_elements: ["url", "plan", "reason", "observation summary", "retained element ids", "observation highlight"]
+    online_interaction_elements: []
+    input: ["step", "objective", "previous plans", "interaction history", "current observation"]
+    interaction_history:
+      verbose: true
+      type: ["text"]
+      step_num: 3
+    current_observation:
+      type: ["text"]
+    output: ["interaction history summary", "observation description", "reason", "action", "observation highlight"]
+    planning_command: ["branch", "prune"]
+    navigation_command: ["click", "type", "stop", "note", "go_back", "use_skill"]
+    play: ["step", "objective", "previous plans", "observation description", "reason", "action"]
+    trash: ["objective", "step", "url", "instruction", "online input", "response"]
+  critic:
+    mode: false
+    debug: 0
+    verbose: 1
+    model: "gpt-4.1"
+  judge:
+    mode: false
+    debug: 0
+    verbose: 1
+    model: "gpt-4.1"
+
+env:
+  fullpage: true
+  prune: true
+  max_browser_rows: 500
+  headless: true
+  task_ids: []

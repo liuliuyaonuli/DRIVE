@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.auth/*
+!.auth/.gitkeep
+.claude/
+
+# Runtime outputs
+AgentOccam-Trajectories/
+artifacts/*
+logs/
+output/
+play-*.txt
+trash-*.txt
+error.log
+current_state.png
+*.pid
+*.exit
+
+# Generated analysis and temporary skill files
+*_simplified/
+*_failures/
+skill_failure_log.jsonl
+skill_feedback_log.jsonl
+skill_feedback_kb.json
+.drive_knew_*
+*.tmp
+*.bak
+*.old
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
