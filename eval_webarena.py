@@ -16,7 +16,7 @@ from AgentOccam.AgentOccam import AgentOccam
 
 from AgentOccam.prompts import AgentOccam_prompt
 
-from AgentOccam.utils import EVALUATOR_DIR, CURRENT_DIR
+from AgentOccam.utils import CURRENT_DIR
 from AgentOccam.eval_utils import build_error_status
 from AgentOccam.skill_registry import load_skills_from_site
 from pathlib import Path

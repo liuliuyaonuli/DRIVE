@@ -18,6 +18,8 @@ Prepare the following before running an experiment:
 5. A skill-library directory when reproducing skill-enabled evaluation.
 
 The task configuration directory must contain files named <task-id>.json.
+The DRIVE actor, critic, and judge prompt templates are versioned under
+`AgentOccam/prompts/`.
 
 ## Installation
 
