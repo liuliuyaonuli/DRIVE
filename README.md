@@ -118,7 +118,7 @@ Run one maintenance round:
 ./scripts/evolve_skills.sh reddit --skills-root /path/to/skills
 ~~~
 
-Maintenance consolidates reasoning guidance and prunes interaction entries according to their feedback and utility metadata.
+Maintenance applies operation-local patches to interaction skills using localized execution feedback. It consolidates reasoning guidance through merge and utility pruning.
 
 ## Repository layout
 
